@@ -6,7 +6,6 @@ try
 {
 int arr[]={1,2,3,4,5};
 System.out.println(arr[10]);
-
 try
 {
 int a=200/0;
@@ -16,20 +15,17 @@ try
 String s=null;
 System.out.println(s.length());
 }
-catch(NullPointerException e)  
-{  
-System.out.println(e);  
-} 
+catch(ArithmeticException e)
+{
+ System.out.println(e);    
 }
-
+}
 catch(ArrayIndexOutOfBoundsException e)  
 {  
 System.out.println(e);  
 } 
 }
-
-
-catch(Exception e)
+catch(NullPointerException e)
 {
 System.out.println(e);
 }
@@ -38,5 +34,5 @@ System.out.println("rest of code");
 }
 
 output:
-java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
-rest of code
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
+	at Main.main(Main.java:8)
