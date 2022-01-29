@@ -1,0 +1,37 @@
+class Main
+{
+public static void main(String args[])
+{
+try
+{
+int a=3+2;
+System.out.println(a);
+String s=null;
+System.out.println(s.length());
+int arr[]={1,2,3,4,5};
+System.out.println(arr[10]);
+
+
+}
+catch(ArithmeticException e)
+{
+System.out.println(e);
+}
+
+catch(ArrayIndexOutOfBoundsException e)  
+{  
+System.out.println(e);  
+} 
+
+catch(Exception e)  
+{  
+System.out.println(e);  
+} 
+System.out.println("rest of code");
+}
+}
+
+output:
+5
+java.lang.NullPointerException
+rest of code
