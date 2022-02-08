@@ -1,0 +1,31 @@
+import java.util.*;
+class example3
+{
+public static void validate(int n)
+{
+if(n<10 || n>50)
+{
+throw new ArithmeticException("exception out of range");
+}
+else
+{
+int b=n*n;
+System.out.println("square is"+b);
+}
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter value");
+int i=sc.nextInt();
+validate(i);
+}
+}
+
+output:
+Z:\>javac example3.java
+
+Z:\>java example3
+enter value
+15
+square is225
