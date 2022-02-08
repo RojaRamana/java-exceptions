@@ -1,0 +1,35 @@
+import java.util.*;
+public class example1
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter array size");
+int n=sc.nextInt();
+
+try
+{
+int[] a=new int[n];
+System.out.println("array size is"+n);
+}
+
+catch(NegativeArraySizeException e)
+{
+System.out.println(e);
+}
+}
+}
+
+output:
+Z:\>javac example1.java
+
+Z:\>java example1
+enter array size
+5
+array size is5
+Z:\>javac example1.java
+
+Z:\>java example1
+enter array size
+-4
+java.lang.NegativeArraySizeException
