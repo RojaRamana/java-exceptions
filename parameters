@@ -1,0 +1,25 @@
+/*<applet code="parameters" width=300 height=100>
+
+<param name="name" value="roja">
+<param name="designation" value="student">
+<param name="class" value="btech">
+<param name="college" value="rvrjc">
+<param name="grade" value=8.5>
+</applet>*/
+import java.awt.*;
+import java.applet.*;
+import java.lang.*;
+public class parameters extends Applet
+{
+public void paint(Graphics g)
+{
+g.drawString("name:"+getParameter("name"),10,20);
+g.drawString("designation:"+getParameter("designation"),20,30);
+g.drawString("class:"+getParameter("class"),30,40);
+g.drawString("college:"+getParameter("college"),40,50);
+float d=Float.parseFloat(getParameter("grade"));
+g.drawString("grade:"+d,50,60);
+}
+}
+
+output:
