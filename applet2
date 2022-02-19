@@ -1,0 +1,38 @@
+/*<applet code="Myapplet1" width=300 height=100></applet>*/
+import java.awt.*;
+import java.applet.*;
+public class Myapplet1 extends Applet
+{
+public void init()
+{
+System.out.println("init");
+}
+public void start()
+{
+System.out.println("start");
+}
+public void stop()
+{
+System.out.println("stop");
+}
+public void destroy()
+{
+System.out.println("destroy");
+}
+public void paint(Graphics g)
+{
+g.drawString("mounika",50,10);
+}
+}
+
+output:
+mounika
+Z:\>javac Myapplet1.java
+
+Z:\>appletviewer Myapplet1.java
+init
+start
+stop
+start
+stop
+destroy
