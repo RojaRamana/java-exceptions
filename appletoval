@@ -1,0 +1,11 @@
+/*<applet code="oval" width=500 height=100></applet>*/
+import java.awt.*;
+import java.applet.*;
+public class oval extends Applet
+{
+public void paint(Graphics g)
+{
+setBackground(Color.orange);
+g.drawOval(2,0,50,50);
+}
+}
