@@ -1,0 +1,13 @@
+/*<applet code="j" width=500 height=100></applet>*/
+import java.awt.*;
+import java.applet.*;
+public class j extends Applet
+{
+public void paint(Graphics g)
+{
+setBackground(Color.orange);
+g.drawLine(5,5,55,5);
+g.drawLine(30,5,30,50);
+g.drawLine(30,50,15,50);
+}
+}
