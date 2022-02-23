@@ -1,0 +1,15 @@
+/*<applet code="polygon" width=500 height=100></applet>*/
+import java.awt.*;
+import java.applet.*;
+public class polygon extends Applet
+{
+public void paint(Graphics g)
+{
+setBackground(Color.cyan);
+g.drawLine(50,5,75,25);
+g.drawLine(50,5,25,25);
+g.drawLine(25,25,25,75);
+g.drawLine(75,25,75,75);
+g.drawLine(25,75,75,75);
+}
+}
