@@ -1,0 +1,16 @@
+/*<applet code="labels" width=500 height=1000 ></applet>*/
+import java.awt.*;
+import java.applet.*;
+public class labels extends Applet
+{
+Label one,two,three;
+public void init()
+{
+one=new Label("hi",Label.RIGHT);
+two=new Label("hello",Label.LEFT);
+three=new Label("hw r u",Label.RIGHT);
+add(one);
+add(two);
+add(three);
+}
+}
