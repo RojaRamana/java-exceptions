@@ -1,0 +1,73 @@
+ import java.util.Random;
+ class thread1 extends Thread
+ {
+     int n,i;
+     Random r=new Random();
+     public void run()
+     {
+         for(i=0;i<5;i++)
+         {
+             int n=r.nextInt(100);
+             System.out.println("random number"+n);
+             if(n%2==0)
+             {
+                 thread2 t2=new thread2(n);
+                 t2.start();
+             }
+             else{
+                 thread3 t3=new thread3(n);
+                 t3.start();
+             }
+             try {
+                 
+                 Thread.sleep(500);             
+             }
+             catch(InterruptedException e)
+             {
+                 System.out.println(e);
+             }
+         }
+     }
+ }
+class thread2 extends Thread{
+    int num;
+    thread2(int n)
+    {
+         num=n;
+    }
+    public void run()
+    {
+        System.out.println("square is"+(num*num));
+    }
+}
+class thread3 extends Thread{
+    int num;
+    thread3(int n)
+    {
+         num=n;
+    }
+    public void run()
+    {
+        System.out.println("cube is"+(num*num*num));
+    }
+}
+class Main {
+        public static void main(String args[])
+        {
+            thread1 t1=new thread1();
+            t1.start();
+            
+      }
+}  
+
+output:
+random number34
+square is1156
+random number58
+square is3364
+random number27
+cube is19683
+random number11
+cube is1331
+random number85
+cube is614125
